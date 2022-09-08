@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>Un dado de 6 caras</h2>
+    <p>Genera números aleatorios enteros entre 1 y 6.</p>
+    <button onclick="myFunction()">Lanza el dado</button>
+    <hr/>
+    <img src="./IMAGENES/DADOS/dice-solid_random.svg" style="width: 100px ; height: 100px" id="dado">
+    <p id="salida"></p>
+    <script>
+      let texto = "";
+      let resultado = "";
+      function myFunction() {
+        let aleatorio = Math.floor(Math.random() * 6) + 1;
+        texto += aleatorio + " ";
+        resultado = "<h3>" + aleatorio + "</h3>" + "<br><br>" + texto;
+        document.getElementById("dado").src="./IMAGENES/DADOS/"+aleatorio+".svg";
+        alert("Salio el numero: " + aleatorio);        
+      }
+    </script>
+  </body>
+</html>
